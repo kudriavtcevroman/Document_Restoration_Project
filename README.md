@@ -1,4 +1,4 @@
-# DocumentRestorationProject
+# Document Restoration Project
 
 Проект по восстановлению изображений документов с использованием DL-моделей. Включает предиктивную модель для классификации искажений и fine-tuned модели для исправления (Restormer, EnlightenGAN, Real-ESRGAN).
 
@@ -34,3 +34,7 @@
 - Загрузка: Изображение или ZIP-архив (jpg/png, лимит 50MB).
 - Обработка: Классификация искажений, восстановление.
 - Вывод: Таблица результатов, скачивание обработанного.
+
+![Пример аугментации документа моделью Restormer] (https://github.com/kudriavtcevroman/Document_Restoration_Project/blob/main/assets/Restormer_augmentation.jpg)
+![Пример аугментации документа моделью EnlightenGAN] (https://github.com/kudriavtcevroman/Document_Restoration_Project/blob/main/assets/Enlightengan_augmentation.jpg)
+![Пример аугментации документа моделью Real-ESRGAN] (https://github.com/kudriavtcevroman/Document_Restoration_Project/blob/main/assets/Real-esrgan_augmentation.jpg)
