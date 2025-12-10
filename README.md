@@ -35,6 +35,6 @@
 - Обработка: Классификация искажений, восстановление.
 - Вывод: Таблица результатов, скачивание обработанного.
 
-![Пример аугментации документа моделью Restormer] (assets/Restormer_augmentation.jpg)
-![Пример аугментации документа моделью EnlightenGAN] (assets/Enlightengan_augmentation.jpg)
-![Пример аугментации документа моделью Real-ESRGAN] (assets/Real-esrgan_augmentation.jpg)
+![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
+![Пример аугментации документа моделью EnlightenGAN](assets/EnlightenGAN_augmentation.jpg)
+![Пример аугментации документа моделью Real-ESRGAN](assets/Real-ESRGAN_augmentation.jpg)
