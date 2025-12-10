@@ -19,7 +19,7 @@
 - finetuned_enlightengan.pth: https://drive.google.com/file/d/1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME/view?usp=sharing
 
 ## Установка
-1. Клонируйте репозиторий: `git clone https://github.com/yourusername/DocumentRestorationProject.git`
+1. Клонируйте репозиторий: `git clone https://github.com/yourusername/Document_Restoration_Project.git`
 2. Установите зависимости: `pip install -r requirements.txt`
 3. Скачайте веса и датасеты в соответствующие folders.
 
