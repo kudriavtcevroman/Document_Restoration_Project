@@ -7,7 +7,7 @@ Document Restoration Project
 - EnlightenGAN — плохой контраст
 - Real-ESRGAN — пикселизация
 
-Поддержка JPG/PNG или ZIP, лог искажений, сервер с Gradio + Celery (многопоточность через Redis).
+Поддержка JPG/PNG, лог искажений, сервер с Gradio + Celery (многопоточность через Redis).
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.3-orange)](https://pytorch.org/)
