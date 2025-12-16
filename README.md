@@ -58,12 +58,12 @@ graph TD;
     B --> E[Real-ESRGAN - pixelation];
     B --> F[No restoration - clean or not document];
 
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#ff9,stroke:#333,stroke-width:2px
-    style D fill:#9f9,stroke:#333,stroke-width:2px
-    style E fill:#f99,stroke:#333,stroke-width:2px
-    style F fill:#9ff,stroke:#333,stroke-width:2px
+    style A fill:#f9f,stroke:#333,stroke-width:2px,text-color:#000
+    style B fill:#bbf,stroke:#333,stroke-width:2px,text-color:#000
+    style C fill:#ff9,stroke:#333,stroke-width:2px,text-color:#000
+    style D fill:#9f9,stroke:#333,stroke-width:2px,text-color:#000
+    style E fill:#f99,stroke:#333,stroke-width:2px,text-color:#000
+    style F fill:#9ff,stroke:#333,stroke-width:2px,text-color:#000
 ```
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
