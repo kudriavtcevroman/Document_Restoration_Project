@@ -52,13 +52,12 @@ pip install -r server/requirements_server.txt  # Для сервера (Celery, 
 
 ```mermaid
 graph TD;
-    Distorted Image-->Prediction model;
-    Prediction model-->Restormer('bad print');
-    Prediction model-->EnlightenGAN('Brightness Contrast');
-    Prediction model-->Real-ESRGAN('Pixelation');
+    A[Distorted Image] --> B[Prediction Model];
+    B --> C[Restormer - bad print];
+    B --> D[EnlightenGAN - brightness contrast];
+    B --> E[Real-ESRGAN - pixelation];
+    B --> F[No restoration - clean or not document];
 ```
-
-
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
 ![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
