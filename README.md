@@ -22,7 +22,8 @@
 - `metrics/` — Метрики обученных моделей.
 - `assets/` — Тестовые изображения.
 - `app.py` - py-файл для запуска приложения.
-
+- `requirements.txt` - файл с зависимостями, необходимыми для работы приложения.
+ 
 ## Датасеты и веса (Google Drive)
 - Датасеты: [папка](https://drive.google.com/drive/folders/1pl5iSfgUZSFefeuP-HYj85ORMpPojSX5?usp=sharing)
 - Веса:
