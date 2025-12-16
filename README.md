@@ -22,6 +22,13 @@
 1. Клонируйте репозиторий: `git clone https://github.com/yourusername/Document_Restoration_Project.git`
 2. Установите зависимости: `pip install -r requirements.txt`
 3. Скачайте веса и датасеты в соответствующие folders.
+4. Для правильной работы приложения Вам необходимо клонировать репозитории Restormer, EnlightenGAN и Real-ESRGAN:
+
+'''
+!git clone https://github.com/swz30/Restormer.git /content/Restormer
+!git clone https://github.com/VITA-Group/EnlightenGAN.git /content/EnlightenGAN
+!git clone https://github.com/xinntao/Real-ESRGAN.git /content/Real-ESRGAN
+'''
 
 ## Запуск сервера
 Используйте notebooks/server_colab.ipynb в Google Colab для запуска сервера с Gradio и Celery.
