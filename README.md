@@ -36,6 +36,7 @@
 1. [Скачайте](https://github.com/redis/redis/releases) и установите Redis.
 
 2. Зайдите в терминал и выполните:
+
 ```bash
 git clone https://github.com/kudriavtcevroman/Document_Restoration_Project.git
 cd Document_Restoration_Project
@@ -50,8 +51,14 @@ git clone https://github.com/xinntao/Real-ESRGAN.git
 pip install -r requirements.txt
 pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
 ```
-3. 
 
+3. Откройте новый терминал и выполните:
+
+```bash
+cd C:\Program Files\Redis # УКажите путь, где у Вас установлен Redis
+
+redis-server.exe
+```
 
 
 
