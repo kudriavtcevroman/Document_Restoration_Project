@@ -24,7 +24,7 @@
 3. Скачайте веса и датасеты в соответствующие folders.
 4. Для правильной работы приложения Вам необходимо клонировать репозитории Restormer, EnlightenGAN и Real-ESRGAN:
 
-'''
+'''ruby
 !git clone https://github.com/swz30/Restormer.git /content/Restormer
 !git clone https://github.com/VITA-Group/EnlightenGAN.git /content/EnlightenGAN
 !git clone https://github.com/xinntao/Real-ESRGAN.git /content/Real-ESRGAN
