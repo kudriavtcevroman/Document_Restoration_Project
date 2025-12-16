@@ -32,7 +32,7 @@
   - finetuned_enlightengan.pth: [ссылка](https://drive.google.com/file/d/1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME/view?usp=sharing)
 
 
-## Установка и запуск приложения (опционально для Windows).
+## Установка и запуск приложения (на Windows).
 1. [Скачайте](https://github.com/redis/redis/releases) и установите Redis.
 
 2. Зайдите в терминал и выполните:
@@ -40,8 +40,8 @@
 git clone https://github.com/kudriavtcevroman/Document_Restoration_Project.git
 cd Document_Restoration_Project
 
-conda create -n doc_rest python=3.10 -y
-conda activate doc_rest
+conda create -n doc_rest_app python=3.10 -y
+conda activate doc_rest_app
 
 git clone https://github.com/swz30/Restormer.git
 git clone https://github.com/VITA-Group/EnlightenGAN.git
