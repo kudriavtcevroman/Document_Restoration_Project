@@ -34,6 +34,7 @@
 
 ## Установка и запуск приложения (опционально для Windows).
 [Скачайте](https://github.com/redis/redis/releases) и установите Redis.
+
 Зайдите в терминал и выполните.
 ```bash
 git clone https://github.com/kudriavtcevroman/Document_Restoration_Project.git
