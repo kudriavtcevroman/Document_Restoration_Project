@@ -1,4 +1,4 @@
-#Document Restoration Project
+# Document Restoration Project
 
 Проект по восстановлению изображений документов с использованием DL-моделей.
 
