@@ -50,6 +50,16 @@ pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f9
 pip install -r server/requirements_server.txt  # Для сервера (Celery, Gradio)
 ```
 
+```mermaid
+graph TD;
+    Distorted Image-->Prediction model;
+    Prediction model-->Restormer('bad print');
+    Prediction model-->EnlightenGAN('Brightness Contrast');
+    Prediction model-->Real-ESRGAN('Pixelation');
+```
+
+
+
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
 ![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
 
