@@ -50,19 +50,55 @@ git clone https://github.com/xinntao/Real-ESRGAN.git
 
 pip install -r requirements.txt
 pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
+
+gdown https://drive.google.com/uc?id=12aPG4dFQ_r64eg0e-yo1ak3yG4wYjU7H -O prediction_model.pth
+gdown https://drive.google.com/uc?id=1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a -O finetuned_restormer.pth
+gdown https://drive.google.com/uc?id=1lgTLQ3K-q52WRmXmdLYb60kWdaJJjHvv -O finetuned_real_esrgan.pth
+gdown https://drive.google.com/uc?id=1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME -O finetuned_enlightengan.pth
 ```
 
-3. Откройте новый терминал и выполните:
+3. Выполните проверку:
 
 ```bash
-cd C:\Program Files\Redis # УКажите путь, где у Вас установлен Redis
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+Если выдаст "False", то выполните:
+
+```bash
+pip uninstall torch torchvision torchaudio -y
+pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
+```
+
+4. Откройте новый терминал и выполните:
+
+```bash
+cd C:\Program Files\Redis # Укажите путь к директории, куда установлен Redis
 
 redis-server.exe
 ```
 
+5. Откройте новый терминал и выполните:
 
+```bash
+cd Document_Restoration_Project
 
+conda activate doc_rest_app
 
+celery -A app.celery_app worker --loglevel=info --pool=solo # для многопоточного режима (celery -A app worker --loglevel=info --concurrency=2 --pool=threads)
+```
+
+6. Откройте новый терминал и выполните:
+
+```bash
+cd Document_Restoration_Project
+
+conda activate doc_rest_app
+
+python app.py
+```
+
+7. Откройте браузер и перейдите по адресу: http://127.0.0.1:7860
 
 
 
