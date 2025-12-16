@@ -64,6 +64,7 @@ graph TD;
     style D fill:#9f9,stroke:#333,stroke-width:2px
     style E fill:#f99,stroke:#333,stroke-width:2px
     style F fill:#9ff,stroke:#333,stroke-width:2px
+```
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
 ![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
