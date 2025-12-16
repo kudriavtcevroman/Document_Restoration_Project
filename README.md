@@ -31,9 +31,10 @@
   - finetuned_real_esrgan.pth: [ссылка](https://drive.google.com/file/d/1lgTLQ3K-q52WRmXmdLYb60kWdaJJjHvv/view?usp=sharing)
   - finetuned_enlightengan.pth: [ссылка](https://drive.google.com/file/d/1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME/view?usp=sharing)
 
-Скачайте в корень или `models/`.
 
-## Установка
+## Установка и запуск приложения (опционально для Windows).
+[Скачайте](https://github.com/redis/redis/releases) и установите Redis.
+Зайдите в терминал и выполните.
 ```bash
 git clone https://github.com/kudriavtcevroman/Document_Restoration_Project.git
 cd Document_Restoration_Project
