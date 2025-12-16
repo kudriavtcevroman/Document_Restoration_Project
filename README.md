@@ -57,7 +57,13 @@ graph TD;
     B --> D[EnlightenGAN - brightness contrast];
     B --> E[Real-ESRGAN - pixelation];
     B --> F[No restoration - clean or not document];
-```
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#ff9,stroke:#333,stroke-width:2px
+    style D fill:#9f9,stroke:#333,stroke-width:2px
+    style E fill:#f99,stroke:#333,stroke-width:2px
+    style F fill:#9ff,stroke:#333,stroke-width:2px
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
 ![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
