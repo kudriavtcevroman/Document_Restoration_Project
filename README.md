@@ -35,7 +35,7 @@
 ## Установка и запуск приложения (на Windows).
 1. [Скачайте](https://github.com/redis/redis/releases) и установите Redis.
 
-2. Зайдите в терминал и выполните:
+2. Запустите терминал и выполните:
 
 ```bash
 git clone https://github.com/kudriavtcevroman/Document_Restoration_Project.git
@@ -70,7 +70,7 @@ pip uninstall torch torchvision torchaudio -y
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 ```
 
-4. Откройте новый терминал и выполните:
+4. Запустите новый терминал и выполните:
 
 ```bash
 cd C:\Program Files\Redis # Укажите путь к директории, куда установлен Redis
@@ -78,7 +78,7 @@ cd C:\Program Files\Redis # Укажите путь к директории, к�
 redis-server.exe
 ```
 
-5. Откройте новый терминал и выполните:
+5. Запустите новый терминал и выполните:
 
 ```bash
 cd Document_Restoration_Project
@@ -88,7 +88,7 @@ conda activate doc_rest_app
 celery -A app.celery_app worker --loglevel=info --pool=solo # для многопоточного режима (celery -A app worker --loglevel=info --concurrency=2 --pool=threads)
 ```
 
-6. Откройте новый терминал и выполните:
+6. Запустите новый терминал и выполните:
 
 ```bash
 cd Document_Restoration_Project
