@@ -17,10 +17,11 @@ Document Restoration Project
 ## Структура репозитория
 - `notebooks/` — Ноутбуки (датасеты, fine-tune, тесты).
 - `server/` — Сервер (app.py, requirements_server.txt).
-- `utils/` — effects.py (искажения).
+- `scripts/` — effects.py (искажения).
 - `models/` — Веса моделей (скачайте по ссылкам).
 - `data/` — Датасеты (скачайте по ссылкам).
-- `tests/` — Тестовые изображения.
+- `metrics/` — Метрики обученных моделей.
+- `assets/` — Тестовые изображения.
 
 ## Датасеты и веса (Google Drive)
 - Датасеты: [папка](https://drive.google.com/drive/folders/1pl5iSfgUZSFefeuP-HYj85ORMpPojSX5?usp=sharing)
