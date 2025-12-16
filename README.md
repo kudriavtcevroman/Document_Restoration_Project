@@ -77,7 +77,21 @@ graph TD;
     style I fill:#9f9,stroke:#333,color:#000,stroke-width:2px
     style J fill:#f9f,stroke:#333,color:#000,stroke-width:2px
 ```
+```mermaid
+graph TD;
+    A[Distorted Image] -->|Upload| B[Prediction Model];
+    B -->|bad print| C[Restormer];
+    B -->|brightness contrast| D[EnlightenGAN];
+    B -->|pixelation| E[Real-ESRGAN];
+    B -->|clean or not document| F[No restoration];
 
+    style A fill:#f9f,stroke:#333,color:#000,stroke-width:2px
+    style B fill:#bbf,stroke:#333,color:#000,stroke-width:2px
+    style C fill:#ff9,stroke:#333,color:#000,stroke-width:2px
+    style D fill:#9f9,stroke:#333,color:#000,stroke-width:2px
+    style E fill:#f99,stroke:#333,color:#000,stroke-width:2px
+    style F fill:#9ff,stroke:#333,color:#000,stroke-width:2px
+```
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
 ![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
