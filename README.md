@@ -24,21 +24,21 @@
 3. Скачайте веса и датасеты в соответствующие folders.
 4. Для правильной работы приложения Вам необходимо клонировать репозитории Restormer, EnlightenGAN и Real-ESRGAN:
 
-'''ruby
+```bash
 !git clone https://github.com/swz30/Restormer.git /content/Restormer
 !git clone https://github.com/VITA-Group/EnlightenGAN.git /content/EnlightenGAN
 !git clone https://github.com/xinntao/Real-ESRGAN.git /content/Real-ESRGAN
-'''
+```
 
 ## Запуск сервера
-Используйте notebooks/server_colab.ipynb в Google Colab для запуска сервера с Gradio и Celery.
+Используйте server/app.py для запуска сервера с Gradio и Celery.
 - Откройте в Colab.
 - Установите runtime с GPU.
 - Запустите все cells.
 - Gradio предоставит публичный URL для доступа.
 
 ## Описание сервера
-- Загрузка: Изображение или ZIP-архив (jpg/png, лимит 50MB).
+- Загрузка: Изображение (jpg/png, лимит 50MB).
 - Обработка: Классификация искажений, восстановление.
 - Вывод: Таблица результатов, скачивание обработанного.
 
