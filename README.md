@@ -16,12 +16,12 @@
 
 ## Структура репозитория
 - `notebooks/` — Ноутбуки (датасеты, fine-tune, тесты).
-- `server/` — Сервер (app.py, requirements_server.txt).
 - `scripts/` — effects.py (искажения).
 - `models/` — Веса моделей (скачайте по ссылкам).
 - `data/` — Датасеты (скачайте по ссылкам).
 - `metrics/` — Метрики обученных моделей.
 - `assets/` — Тестовые изображения.
+- `app.py` - py-файл для запуска приложения.
 
 ## Датасеты и веса (Google Drive)
 - Датасеты: [папка](https://drive.google.com/drive/folders/1pl5iSfgUZSFefeuP-HYj85ORMpPojSX5?usp=sharing)
@@ -47,7 +47,6 @@ git clone https://github.com/xinntao/Real-ESRGAN.git
 
 pip install -r requirements.txt
 pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
-pip install -r server/requirements_server.txt  # Для сервера (Celery, Gradio)
 ```
 
 ## Workflow обработки изображений в Document Restoration App
