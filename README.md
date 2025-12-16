@@ -50,6 +50,8 @@ pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f9
 pip install -r server/requirements_server.txt  # Для сервера (Celery, Gradio)
 ```
 
+## Workflow обработки изображений в Document Restoration App
+
 ```mermaid
 graph TD;
     A[Upload Image] --> B[Prediction Model];
@@ -76,21 +78,6 @@ graph TD;
     style H fill:#9ff,stroke:#333,color:#000,stroke-width:2px
     style I fill:#9f9,stroke:#333,color:#000,stroke-width:2px
     style J fill:#f9f,stroke:#333,color:#000,stroke-width:2px
-```
-```mermaid
-graph TD;
-    A[Distorted Image] -->|Upload| B[Prediction Model];
-    B -->|bad print| C[Restormer];
-    B -->|brightness contrast| D[EnlightenGAN];
-    B -->|pixelation| E[Real-ESRGAN];
-    B -->|clean or not document| F[No restoration];
-
-    style A fill:#f9f,stroke:#333,color:#000,stroke-width:2px
-    style B fill:#bbf,stroke:#333,color:#000,stroke-width:2px
-    style C fill:#ff9,stroke:#333,color:#000,stroke-width:2px
-    style D fill:#9f9,stroke:#333,color:#000,stroke-width:2px
-    style E fill:#f99,stroke:#333,color:#000,stroke-width:2px
-    style F fill:#9ff,stroke:#333,color:#000,stroke-width:2px
 ```
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
