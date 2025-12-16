@@ -52,22 +52,6 @@ pip install -r server/requirements_server.txt  # Для сервера (Celery, 
 
 ```mermaid
 graph TD;
-    A[Distorted Image] --> B[Prediction Model];
-    B --> C[Restormer - bad print];
-    B --> D[EnlightenGAN - brightness contrast];
-    B --> E[Real-ESRGAN - pixelation];
-    B --> F[No restoration - clean or not document];
-
-    style A fill:#f9f,stroke:#333,color:#000,stroke-width:2px
-    style B fill:#bbf,stroke:#333,color:#000,stroke-width:2px
-    style C fill:#ff9,stroke:#333,color:#000,stroke-width:2px
-    style D fill:#9f9,stroke:#333,color:#000,stroke-width:2px
-    style E fill:#f99,stroke:#333,color:#000,stroke-width:2px
-    style F fill:#9ff,stroke:#333,color:#000,stroke-width:2px
-```
-
-```mermaid
-graph TD;
     A[Upload Image] --> B[Prediction Model];
     B --> C[Distorted Image];
     B --> D[Clean Image];
@@ -88,6 +72,10 @@ graph TD;
     style D fill:#9f9,stroke:#333,color:#000,stroke-width:2px
     style E fill:#f99,stroke:#333,color:#000,stroke-width:2px
     style F fill:#9ff,stroke:#333,color:#000,stroke-width:2px
+    style G fill:#9ff,stroke:#333,color:#000,stroke-width:2px
+    style H fill:#9ff,stroke:#333,color:#000,stroke-width:2px
+    style I fill:#9f9,stroke:#333,color:#000,stroke-width:2px
+    style J fill:#f9f,stroke:#333,color:#000,stroke-width:2px
 ```
 
 
