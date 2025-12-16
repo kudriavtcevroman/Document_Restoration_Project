@@ -1,46 +1,49 @@
-# Document Restoration Project
+Document Restoration Project
 
-Проект по восстановлению изображений документов с использованием DL-моделей. Включает предиктивную модель для классификации искажений и fine-tuned модели для исправления (Restormer, EnlightenGAN, Real-ESRGAN).
+Проект по восстановлению изображений документов с использованием DL-моделей.
 
-## Структура
-- notebooks/: Ноутбуки для создания датасетов, обучения, тестирования.
-- scripts/: Вспомогательные скрипты (эффекты искажений).
-- models/: Место для весов моделей (скачайте по ссылкам ниже).
-- data/: Место для датасетов (скачайте по ссылкам ниже).
-- tests/: Для тестовых изображений.
+Классифицирует искажения (ResNet50) и применяет fine-tuned модели:
+- Restormer — плохая печать
+- EnlightenGAN — плохой контраст
+- Real-ESRGAN — пикселизация
 
-## Ссылки на датасеты (Google Drive)
-- https://drive.google.com/drive/folders/1pl5iSfgUZSFefeuP-HYj85ORMpPojSX5?usp=sharing
+Поддержка JPG/PNG или ZIP, лог искажений, сервер с Gradio + Celery (многопоточность через Redis).
 
-## Ссылки на веса моделей (Google Drive)
-- prediction_model.pth: https://drive.google.com/file/d/12aPG4dFQ_r64eg0e-yo1ak3yG4wYjU7H/view?usp=sharing
-- finetuned_restormer.pth: https://drive.google.com/file/d/1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a/view?usp=sharing
-- finetuned_real_esrgan.pth: https://drive.google.com/file/d/1lgTLQ3K-q52WRmXmdLYb60kWdaJJjHvv/view?usp=sharing
-- finetuned_enlightengan.pth: https://drive.google.com/file/d/1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME/view?usp=sharing
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.3-orange)](https://pytorch.org/)
+[![Gradio](https://img.shields.io/badge/Gradio-6.0-green)](https://gradio.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Структура репозитория
+- `notebooks/` — Ноутбуки (датасеты, fine-tune, тесты).
+- `server/` — Сервер (app.py, requirements_server.txt).
+- `utils/` — effects.py (искажения).
+- `models/` — Веса моделей (скачайте по ссылкам).
+- `data/` — Датасеты (скачайте по ссылкам).
+- `tests/` — Тестовые изображения.
+
+## Датасеты и веса (Google Drive)
+- Датасеты: [папка](https://drive.google.com/drive/folders/1pl5iSfgUZSFefeuP-HYj85ORMpPojSX5?usp=sharing)
+- Веса:
+  - prediction_model.pth: [ссылка](https://drive.google.com/file/d/12aPG4dFQ_r64eg0e-yo1ak3yG4wYjU7H/view?usp=sharing)
+  - finetuned_restormer.pth: [ссылка](https://drive.google.com/file/d/1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a/view?usp=sharing)
+  - finetuned_real_esrgan.pth: [ссылка](https://drive.google.com/file/d/1lgTLQ3K-q52WRmXmdLYb60kWdaJJjHvv/view?usp=sharing)
+  - finetuned_enlightengan.pth: [ссылка](https://drive.google.com/file/d/1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME/view?usp=sharing)
+
+Скачайте в корень или `models/`.
 
 ## Установка
-1. Клонируйте репозиторий: `git clone https://github.com/yourusername/Document_Restoration_Project.git`
-2. Установите зависимости: `pip install -r requirements.txt`
-3. Скачайте веса и датасеты в соответствующие folders.
-4. Для правильной работы приложения Вам необходимо клонировать репозитории Restormer, EnlightenGAN и Real-ESRGAN:
-
 ```bash
-!git clone https://github.com/swz30/Restormer.git /content/Restormer
-!git clone https://github.com/VITA-Group/EnlightenGAN.git /content/EnlightenGAN
-!git clone https://github.com/xinntao/Real-ESRGAN.git /content/Real-ESRGAN
+git clone https://github.com/kudriavtcevroman/Document_Restoration_Project.git
+cd Document_Restoration_Project
+
+conda create -n doc_rest python=3.10 -y
+conda activate doc_rest
+
+pip install -r requirements.txt
+pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
+pip install -r server/requirements_server.txt  # Для сервера (Celery, Gradio)
 ```
-
-## Запуск сервера
-Используйте server/app.py для запуска сервера с Gradio и Celery.
-- Откройте в Colab.
-- Установите runtime с GPU.
-- Запустите все cells.
-- Gradio предоставит публичный URL для доступа.
-
-## Описание сервера
-- Загрузка: Изображение (jpg/png, лимит 50MB).
-- Обработка: Классификация искажений, восстановление.
-- Вывод: Таблица результатов, скачивание обработанного.
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
 ![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
