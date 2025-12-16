@@ -1,4 +1,0 @@
-celery==5.4.0
-redis==5.1.1
-gradio==6.0.2
-gdown==5.2.0
