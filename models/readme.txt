@@ -18,6 +18,6 @@
   Ссылка: https://drive.google.com/file/d/1Ik59a5iQ0stXZAxv6rsdjj4TB0Mxi3-p/view?usp=sharing
 
 ## Использование:
-- Загружайте в модели: model.load_state_dict(torch.load('prediction_model.pth'))
+- Загружайте модели: model.load_state_dict(torch.load('prediction_model.pth'))
 - Убедитесь в наличии GPU.
 - Если репозиторий клонирован локально, используйте gdown для автоматизации скачивания.
