@@ -7,14 +7,11 @@
 
 ## Список файлов:
 - create_augmentation_dataset.ipynb: Создание датасета с искажениями для fine-tuning моделей восстановления (bad_print, brightness_contrast, pixelation).
-- create_prediction_dataset.ipynb: Создание датасета для обучения предиктивной модели классификации искажений.
-- modified_prediction_dataset.ipynb: Модификация датасета для предиктивной модели с добавлением класса 'not_document' из CIFAR-10.
 - prediction_model_train.ipynb: Обучение предиктивной модели (ResNet50) для классификации типов искажений.
 - restormer_bad_print_train.ipynb: Fine-tuning модели Restormer для восстановления изображений с эффектом "плохой печати".
 - enlightengan_train.ipynb: Fine-tuning модели EnlightenGAN для восстановления изображений с эффектом "засветления/затемнения".
-- real_esrgan_train.ipynb: Fine-tuning модели Real-ESRGAN для восстановления изображений с эффектом "пикселизации".
+- restormer_pixelation_train.ipynb: Fine-tuning модели Restormer для восстановления изображений с эффектом "пикселизации".
 - test_pipline.ipynb: Тестирование моделей восстановления на различных искажениях с визуализацией и OCR-сравнением.
-- server_colab.ipynb: Реализация и запуск сервера в Google Colab с Gradio и Celery для многопоточной обработки.
 
 ## Инструкции:
 - Запускайте ноутбуки в Jupyter или Google Colab.
