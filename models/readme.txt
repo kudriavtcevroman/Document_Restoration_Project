@@ -6,7 +6,7 @@
 
 ## Инструкции по скачиванию:
 - prediction_model.pth: Веса предиктивной модели (ResNet50) для классификации искажений.
-  Ссылка: https://drive.google.com/file/d/1ucc7-Tqb317qb9-BnyxHNjBm6yeSJHBh/view?usp=sharing
+  Ссылка: https://drive.google.com/file/d/17NFLGU17VIebNaf0vCJsW238JXkm9k8o/view?usp=sharing
 - finetuned_restormer_bad_print.pth: Веса fine-tuned Restormer для "плохой печати".
   Ссылка: https://drive.google.com/file/d/1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a/view?usp=sharing
 - finetuned_restormer_pixelation.pth: Веса fine-tuned Real-ESRGAN для "пикселизации".
