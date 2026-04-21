@@ -52,10 +52,12 @@ git clone https://github.com/xinntao/Real-ESRGAN.git
 pip install -r requirements.txt
 pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
 
-gdown https://drive.google.com/uc?id=12aPG4dFQ_r64eg0e-yo1ak3yG4wYjU7H -O prediction_model.pth
-gdown https://drive.google.com/uc?id=1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a -O finetuned_restormer.pth
-gdown https://drive.google.com/uc?id=1lgTLQ3K-q52WRmXmdLYb60kWdaJJjHvv -O finetuned_real_esrgan.pth
+gdown https://drive.google.com/file/d/17NFLGU17VIebNaf0vCJsW238JXkm9k8o -O prediction_model.pth
+gdown https://drive.google.com/uc?id=1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a -O finetuned_restormer_bad_print.pth
+gdown https://drive.google.com/file/d/1cHBAqs1PjuxxzKO4TS2c-C5p-zDSb3ae -O finetuned_restormer_pixelation.pth
 gdown https://drive.google.com/uc?id=1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME -O finetuned_enlightengan.pth
+gdown https://drive.google.com/file/d/1oEpjD1eSOAf_BPfRYqfZwfaR6ZtWOBU8 -O DocScanner-L.pth
+gdown https://drive.google.com/file/d/1Ik59a5iQ0stXZAxv6rsdjj4TB0Mxi3-p -O seg.pth
 ```
 
 3. Выполните проверку:
