@@ -47,6 +47,7 @@ conda activate doc_rest_app
 
 git clone https://github.com/swz30/Restormer.git
 git clone https://github.com/VITA-Group/EnlightenGAN.git
+git clone https://github.com/ZZZHANG-jx/DocRes.git DocScanner
 
 pip install -r requirements.txt
 pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
