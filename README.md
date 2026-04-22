@@ -139,6 +139,7 @@ graph TD;
     style H fill:#9ff,stroke:#333,color:#000,stroke-width:2px
     style I fill:#9f9,stroke:#333,color:#000,stroke-width:2px
     style J fill:#f9f,stroke:#333,color:#000,stroke-width:2px
+    style K fill:#9ff,stroke:#333,color:#000,stroke-width:2px
 ```
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer
