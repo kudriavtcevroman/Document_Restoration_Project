@@ -47,7 +47,7 @@ conda activate doc_rest_app
 
 git clone https://github.com/swz30/Restormer.git
 git clone https://github.com/VITA-Group/EnlightenGAN.git
-git clone https://github.com/ZZZHANG-jx/DocRes.git DocScanner
+git clone https://github.com/fh2019ustc/DocScanner.git DocScanner
 
 pip install -r requirements.txt
 pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
@@ -58,6 +58,10 @@ gdown https://drive.google.com/file/d/1cHBAqs1PjuxxzKO4TS2c-C5p-zDSb3ae -O finet
 gdown https://drive.google.com/uc?id=1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME -O finetuned_enlightengan.pth
 gdown https://drive.google.com/file/d/1oEpjD1eSOAf_BPfRYqfZwfaR6ZtWOBU8 -O DocScanner-L.pth
 gdown https://drive.google.com/file/d/1Ik59a5iQ0stXZAxv6rsdjj4TB0Mxi3-p -O seg.pth
+
+mkdir DocScanner\model_pretrained
+move DocScanner-L.pth DocScanner\model_pretrained\DocScanner-L.pth
+move seg.pth DocScanner\model_pretrained\seg.pth
 ```
 
 3. Выполните проверку:
