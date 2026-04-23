@@ -69,7 +69,7 @@ Document_Restoration_Benchmark/
 
 **Результат тестирования Document Restoration App на бенчмарке:**
 
-![WER Gain по классам искажений](assets/wer_gain_chart.png)  
+![WER Gain по классам искажений](assets/wer_gain_chart.jpg)  
 *График прироста метрики WER после восстановления по классам*
 
 ## Установка и запуск приложения (на Windows).
