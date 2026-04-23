@@ -46,22 +46,23 @@
 
 **Структура бенчмарка:**
 
+```bash
 Document_Restoration_Benchmark/
-├── input/                  ← изображения с искажениями
+├── input/                  # Изображения с искажениями
 │   ├── background/
 │   ├── bad_print/
 │   ├── brightness_contrast/
 │   ├── clean/
 │   ├── not_document/
 │   └── pixelation/
-├── gt/                     ← чистые (ground truth) изображения
+├── gt/                     # Чистые изображения (ground truth)
 │   ├── background/
 │   ├── bad_print/
 │   ├── brightness_contrast/
 │   ├── clean/
 │   ├── not_document/
 │   └── pixelation/
-└── labels.csv              ← разметка (image, true_distortion, gt_image)
+└── labels.csv              # Разметка: image, true_distortion, gt_image
 
 
 **Ссылка на бенчмарк:**  
