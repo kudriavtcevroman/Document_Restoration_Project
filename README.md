@@ -63,7 +63,7 @@ Document_Restoration_Benchmark/
 │   ├── not_document/
 │   └── pixelation/
 └── labels.csv              # Разметка: image, true_distortion, gt_image
-
+```
 
 **Ссылка на бенчмарк:**  
 [📁 Document_Restoration_Benchmark (Google Drive)](https://drive.google.com/drive/folders/1KAqG0XYx8lVp77myeWprDggVdXmVZc3h?usp=sharing)
