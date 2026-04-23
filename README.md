@@ -27,11 +27,12 @@
 ## Датасеты и веса (Google Drive)
 - Датасеты: [папка](https://drive.google.com/drive/folders/1pl5iSfgUZSFefeuP-HYj85ORMpPojSX5?usp=sharing)
 - Веса:
-  - prediction_model.pth: [ссылка](https://drive.google.com/file/d/12aPG4dFQ_r64eg0e-yo1ak3yG4wYjU7H/view?usp=sharing)
-  - finetuned_restormer.pth: [ссылка](https://drive.google.com/file/d/1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a/view?usp=sharing)
-  - finetuned_real_esrgan.pth: [ссылка](https://drive.google.com/file/d/1lgTLQ3K-q52WRmXmdLYb60kWdaJJjHvv/view?usp=sharing)
+  - prediction_model.pth: [ссылка](https://drive.google.com/file/d/17NFLGU17VIebNaf0vCJsW238JXkm9k8o/view?usp=sharing)
+  - finetuned_restormer_bad_print.pth: [ссылка](https://drive.google.com/file/d/1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a/view?usp=sharing)
+  - finetuned_restormer_pixelation.pth: [ссылка](https://drive.google.com/file/d/1cHBAqs1PjuxxzKO4TS2c-C5p-zDSb3ae/view?usp=sharing)
   - finetuned_enlightengan.pth: [ссылка](https://drive.google.com/file/d/1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME/view?usp=sharing)
-
+  - DocScanner-L.pth: [ссылка](https://drive.google.com/file/d/1oEpjD1eSOAf_BPfRYqfZwfaR6ZtWOBU8/view?usp=sharing)
+  - seg.pth (для DocScanner): [ссылка](https://drive.google.com/file/d/1Ik59a5iQ0stXZAxv6rsdjj4TB0Mxi3-p/view?usp=sharing)
 
 ## Установка и запуск приложения (на Windows).
 1. [Скачайте](https://github.com/redis/redis/releases) и установите Redis.
@@ -142,11 +143,14 @@ graph TD;
     style K fill:#9ff,stroke:#333,color:#000,stroke-width:2px
 ```
 
-## Пример аугментации документа с эффектом плохой печати моделью Restormer
-![Пример аугментации документа моделью Restormer](assets/Restormer_augmentation.jpg)
+## Пример аугментации документа с эффектом плохой печати моделью Restormer_bad_print
+![Пример аугментации документа моделью Restormer_bad_print](assets/Restormer_augmentation.jpg)
 
 ## Пример аугментации документа с плохим контрастом моделью EnlightenGAN
 ![Пример аугментации документа моделью EnlightenGAN](assets/Enlightengan_augmentation.jpg)
 
-## Пример аугментации документа с плохим качеством моделью Real-ESRGAN
-![Пример аугментации документа моделью Real-ESRGAN](assets/Real-esrgan_augmentation.jpg)
+## Пример аугментации документа с плохим качеством моделью Restormer_pixelation
+![Пример аугментации документа моделью Restormer_pixelation](assets/Real-esrgan_augmentation.jpg)
+
+## Пример аугментации документа с посторонним фоном моделью DocScaner
+![Пример аугментации документа моделью DocScaner](assets/Real-esrgan_augmentation.jpg)
