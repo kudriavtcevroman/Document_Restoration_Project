@@ -144,13 +144,13 @@ graph TD;
 ```
 
 ## Пример аугментации документа с эффектом плохой печати моделью Restormer_bad_print
-![Пример аугментации документа моделью Restormer_bad_print](assets/Restormer_augmentation.jpg)
+![Пример аугментации документа моделью Restormer_bad_print](assets/Restormer_bad_print_augmentation.jpg)
 
 ## Пример аугментации документа с плохим контрастом моделью EnlightenGAN
 ![Пример аугментации документа моделью EnlightenGAN](assets/Enlightengan_augmentation.jpg)
 
 ## Пример аугментации документа с плохим качеством моделью Restormer_pixelation
-![Пример аугментации документа моделью Restormer_pixelation](assets/Real-esrgan_augmentation.jpg)
+![Пример аугментации документа моделью Restormer_pixelation](assets/Restormer_pixelation_augmentation.jpg)
 
 ## Пример аугментации документа с посторонним фоном моделью DocScaner
-![Пример аугментации документа моделью DocScaner](assets/Real-esrgan_augmentation.jpg)
+![Пример аугментации документа моделью DocScaner](assets/DocScaner_background_augmentation.jpg)
