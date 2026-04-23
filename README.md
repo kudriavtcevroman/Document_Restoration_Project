@@ -34,6 +34,44 @@
   - DocScanner-L.pth: [ссылка](https://drive.google.com/file/d/1oEpjD1eSOAf_BPfRYqfZwfaR6ZtWOBU8/view?usp=sharing)
   - seg.pth (для DocScanner): [ссылка](https://drive.google.com/file/d/1Ik59a5iQ0stXZAxv6rsdjj4TB0Mxi3-p/view?usp=sharing)
 
+## Бенчмарк `Document_Restoration_Benchmark`
+
+Для объективной оценки качества восстановления документов был создан специализированный тестовый бенчмарк.
+
+**Характеристики:**
+- 300 изображений (по 50 на каждый из 6 классов)
+- Каждое изображение имеет ground truth (чистое изображение)
+- Разрешение: 1024 × 1448 (вертикальное A4)
+- Используется для расчёта метрик PSNR, SSIM, CER, WER и gain-метрик
+
+**Структура бенчмарка:**
+
+Document_Restoration_Benchmark/
+├── input/                  ← изображения с искажениями
+│   ├── background/
+│   ├── bad_print/
+│   ├── brightness_contrast/
+│   ├── clean/
+│   ├── not_document/
+│   └── pixelation/
+├── gt/                     ← чистые (ground truth) изображения
+│   ├── background/
+│   ├── bad_print/
+│   ├── brightness_contrast/
+│   ├── clean/
+│   ├── not_document/
+│   └── pixelation/
+└── labels.csv              ← разметка (image, true_distortion, gt_image)
+
+
+**Ссылка на бенчмарк:**  
+[📁 Document_Restoration_Benchmark (Google Drive)](https://drive.google.com/drive/folders/1KAqG0XYx8lVp77myeWprDggVdXmVZc3h?usp=sharing)
+
+**Результат тестирования Document Restoration App на бенчмарке:**
+
+![WER Gain по классам искажений](assets/wer_gain_chart.png)  
+*График прироста метрики WER после восстановления по классам*
+
 ## Установка и запуск приложения (на Windows).
 1. [Скачайте](https://github.com/redis/redis/releases) и установите Redis.
 
