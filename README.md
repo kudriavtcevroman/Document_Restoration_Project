@@ -85,7 +85,7 @@ Document_Restoration_Benchmark/
 python --version
 ```
 
-2. Запустите терминал и выполните:
+3. Запустите терминал и выполните:
 
 ```bash
 mkdir C:\Projects
@@ -113,7 +113,7 @@ move DocScanner-L.pth DocScanner\model_pretrained\DocScanner-L.pth
 move seg.pth DocScanner\model_pretrained\seg.pth
 ```
 
-3. Выполните проверку:
+4. Выполните проверку:
 
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
@@ -126,7 +126,7 @@ pip uninstall torch torchvision torchaudio -y
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu118
 ```
 
-4. Запустите новый терминал и выполните:
+5. Запустите новый терминал и выполните:
 
 ```bash
 cd C:\Program Files\Redis # Укажите путь к директории, куда установлен Redis
@@ -145,27 +145,27 @@ netstat -ano | findstr :6379
 taskkill /PID 12345(ID процесса укажите свой) /F
 ```
 
-5. Запустите новый терминал и выполните:
-
-```bash
-cd Document_Restoration_Project
-
-conda activate doc_rest_app
-
-celery -A app.celery_app worker --loglevel=info --pool=solo # для многопоточного режима (celery -A app worker --loglevel=info --concurrency=2 --pool=threads)
-```
-
 6. Запустите новый терминал и выполните:
 
 ```bash
-cd Document_Restoration_Project
+cd C:\Projects\Document_Restoration_Project
 
-conda activate doc_rest_app
+venv\Scripts\activate
+
+celery -A app.celery_app worker --loglevel=info --pool=solo
+```
+
+7. Запустите новый терминал и выполните:
+
+```bash
+cd C:\Projects\Document_Restoration_Project
+
+venv\Scripts\activate
 
 python app.py
 ```
 
-7. Откройте браузер и перейдите по адресу: http://127.0.0.1:7860
+8. Откройте браузер и перейдите по адресу: http://127.0.0.1:7860
 
 
 
