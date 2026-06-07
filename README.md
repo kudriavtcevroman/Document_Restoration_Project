@@ -75,15 +75,27 @@ Document_Restoration_Benchmark/
 
 ## Установка и запуск приложения (на Windows).
 1. [Скачайте](https://github.com/redis/redis/releases) и установите Redis.
+2. Установите Python 3.10:
+   - Перейдите на страницу релиза Python 3.10:  https://www.python.org/downloads/release/python-31011/
+   - Скачайте **Windows installer (64-bit)**.
+   - Запустите установщик **от имени обычного пользователя**. **Обязательно** поставьте **«Add python.exe to PATH»** внизу окна.
+   - Нажмите **Install Now**.
+   - После установки откройте терминал  и проверьте:
+```cmd
+python --version
+```
 
 2. Запустите терминал и выполните:
 
 ```bash
+mkdir C:\Projects
+cd C:\Projects
+
 git clone https://github.com/kudriavtcevroman/Document_Restoration_Project.git
 cd Document_Restoration_Project
 
-conda create -n doc_rest_app python=3.10 -y
-conda activate doc_rest_app
+py -3.10 -m venv venv
+venv\Scripts\activate
 
 git clone https://github.com/swz30/Restormer.git
 git clone https://github.com/VITA-Group/EnlightenGAN.git
@@ -91,14 +103,11 @@ git clone https://github.com/fh2019ustc/DocScanner.git DocScanner
 
 pip install -r requirements.txt
 pip install "git+https://github.com/xinntao/BasicSR.git@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a"
+```
+[Скачайте веса моделей]([https://github.com/redis/redis/releases](https://drive.google.com/drive/folders/1kZ-vAAXHmvOzeAnufvZec5wGHNj3hHkl))  и поместите в директорию C:\Projects\Document_Restoration_Project.
 
-gdown https://drive.google.com/file/d/17NFLGU17VIebNaf0vCJsW238JXkm9k8o -O prediction_model.pth
-gdown https://drive.google.com/uc?id=1QUgPn7qs0kHj8M8lmmgtIy44qVxvMy6a -O finetuned_restormer_bad_print.pth
-gdown https://drive.google.com/file/d/1cHBAqs1PjuxxzKO4TS2c-C5p-zDSb3ae -O finetuned_restormer_pixelation.pth
-gdown https://drive.google.com/uc?id=1kkTi8dWub0jL7zA10B_0VDtEzGX0GpME -O finetuned_enlightengan.pth
-gdown https://drive.google.com/file/d/1oEpjD1eSOAf_BPfRYqfZwfaR6ZtWOBU8 -O DocScanner-L.pth
-gdown https://drive.google.com/file/d/1Ik59a5iQ0stXZAxv6rsdjj4TB0Mxi3-p -O seg.pth
-
+Выполните в том же терминале:
+```bash
 mkdir DocScanner\model_pretrained
 move DocScanner-L.pth DocScanner\model_pretrained\DocScanner-L.pth
 move seg.pth DocScanner\model_pretrained\seg.pth
@@ -123,6 +132,17 @@ pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https
 cd C:\Program Files\Redis # Укажите путь к директории, куда установлен Redis
 
 redis-server.exe
+```
+Если выдаст " # Warning: no config file specified, using the default config. In order to specify a config file use redis-server.exe /path/to/redis.conf. # Creating Server TCP listening socket *:6379: bind: No such file or directory".
+То выполните команду:
+```bash
+netstat -ano | findstr :6379
+```
+Должнен отобразиться список процессов (TCP    0.0.0.0:6379    ...    LISTENING    12345)
+
+Убейте все процессы командой:
+```bash
+taskkill /PID 12345(ID процесса укажите свой) /F
 ```
 
 5. Запустите новый терминал и выполните:
